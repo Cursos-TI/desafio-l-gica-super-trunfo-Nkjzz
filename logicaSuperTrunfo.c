@@ -5,6 +5,9 @@
 
 int main(){
 
+    // Variáveis
+    int atributo;
+
     // Dados da carta 1
     char Estado1[2] = "SP", CodigoDaCidade1[3] = "A01", NomeDaCidade1[20] = "São Paulo";
     int Populacao1 = 2000, NumeroPontosTuristicos1 = 15;
@@ -19,34 +22,77 @@ int main(){
     float DensidadePopulacional2 = Populacao2 / Area2;
     float PIBPerCapita2 = PIB2 / Populacao2;
 
-    /*
-    Atributo organizado em:
+    // Menu Interativo
+    printf("### Menu Interativo ### \n1. População\n2. Área\n3. PIB\n4. Densidade Populacional\n5. Pontos Turísticos\n\n ESCOLHA UMA DAS OPCOES ACIMA: ");
+    scanf("%d", &atributo);
 
-    1. População
-    2. Área
-    3. PIB
-    4. Densidade Populacional
-    5. PIB Per Capital
-    */
 
-    int atributo = 1;
-    //Comparacao de Cartas
+    //Comparação de Cartas
 
-    if (atributo == 1){
-         if (Populacao1 > Populacao2){
+    if (atributo == 1)
+    {
+         if (Populacao1 > Populacao2)
+         {
             printf("Comparação de cartas (Atributo: População): \nCarta 1 - São Paulo (SP): %u\nCarta 2 - Rio de Janeiro (RJ): %u\nCarta 1 (São Paulo) venceu! \n", Populacao1, Populacao2);
-        } else if (Populacao1 < Populacao2){
+        } else if (Populacao1 < Populacao2)
+        {
             printf("Comparação de cartas (Atributo: População): \nCarta 1 - São Paulo (SP): %u\nCarta 2 - Rio de Janeiro (RJ): %u\nCarta 2 (Rio de Janeiro) venceu! \n", Populacao1, Populacao2);
-        } else if (Populacao1 == Populacao2){
+        } else if (Populacao1 == Populacao2)
+        {
             printf("Comparação de cartas (Atributo: População): \nCarta 1 - São Paulo (SP): %u\nCarta 2 - Rio de Janeiro (RJ): %u\nEmpate! \n", Populacao1, Populacao2);
         }    
-    } else{
-        printf("Trabalhando nisso...");
+    } else if (atributo == 2)
+    {
+        if (Area1 > Area2)
+         {
+            printf("Comparação de cartas (Atributo: Area): \nCarta 1 - São Paulo (SP): %.2f KM²\nCarta 2 - Rio de Janeiro (RJ): %.2f KM²\nCarta 1 (São Paulo) venceu! \n", Area1, Area2);
+        } else if (Area1 < Area2)
+        {
+            printf("Comparação de cartas (Atributo: Area): \nCarta 1 - São Paulo (SP): %.2f KM²\nCarta 2 - Rio de Janeiro (RJ): %.2f KM²\nCarta 2 (Rio de Janeiro) venceu! \n", Area1, Area2);
+        } else if (Area1 == Area2)
+        {
+            printf("Comparação de cartas (Atributo: Area): \nCarta 1 - São Paulo (SP): %.2f KM²\nCarta 2 - Rio de Janeiro (RJ): %.2f KM²\nEmpate! \n", Area1, Area2);
+        }    
+    } else if (atributo == 3)
+    {
+        if (PIB1 > PIB2)
+         {
+            printf("Comparação de cartas (Atributo: PIB): \nCarta 1 - São Paulo (SP): R$ %.2f\nCarta 2 - Rio de Janeiro (RJ): R$ %.2f\nCarta 1 (São Paulo) venceu! \n", PIB1, PIB2);
+        } else if (PIB1 < PIB2)
+        {
+            printf("Comparação de cartas (Atributo: PIB): \nCarta 1 - São Paulo (SP): R$ %.2f\nCarta 2 - Rio de Janeiro (RJ): R$ %.2f\nCarta 2 (Rio de Janeiro) venceu! \n", PIB1, PIB2);
+        } else if (PIB1 == PIB2)
+        {
+            printf("Comparação de cartas (Atributo: PIB): \nCarta 1 - São Paulo (SP): R$ %.2f\nCarta 2 - Rio de Janeiro (RJ): R$ %.2f\nEmpate! \n", PIB1, PIB2);
+        }    
+    } else if (atributo == 4)
+    {
+        if (DensidadePopulacional1 < DensidadePopulacional2)
+         {
+            printf("Comparação de cartas (Atributo: Densidade Populacional): \nCarta 1 - São Paulo (SP): %.2f\nCarta 2 - Rio de Janeiro (RJ): %.2f\nCarta 1 (São Paulo) venceu! \n", DensidadePopulacional1, DensidadePopulacional2);
+        } else if (DensidadePopulacional1 > DensidadePopulacional2)
+        {
+            printf("Comparação de cartas (Atributo: Densidade Populacional): \nCarta 1 - São Paulo (SP): %.2f\nCarta 2 - Rio de Janeiro (RJ): %.2f\nCarta 2 (Rio de Janeiro) venceu! \n", DensidadePopulacional1, DensidadePopulacional2);
+        } else if (DensidadePopulacional1 == DensidadePopulacional2)
+        {
+            printf("Comparação de cartas (Atributo: Densidade Populacional): \nCarta 1 - São Paulo (SP): %.2f\nCarta 2 - Rio de Janeiro (RJ): %.2f\nEmpate! \n", DensidadePopulacional1, DensidadePopulacional2);
+        } 
+    } else if (atributo == 5)
+    {
+        if (NumeroPontosTuristicos1 > NumeroPontosTuristicos2)
+         {
+            printf("Comparação de cartas (Atributo: Pontos Turísticos): \nCarta 1 - São Paulo (SP): %u\nCarta 2 - Rio de Janeiro (RJ): %u\nCarta 1 (São Paulo) venceu! \n", NumeroPontosTuristicos1, NumeroPontosTuristicos2);
+        } else if (NumeroPontosTuristicos1 < NumeroPontosTuristicos2)
+        {
+            printf("Comparação de cartas (Atributo: Pontos Turísticos): \nCarta 1 - São Paulo (SP): %u\nCarta 2 - Rio de Janeiro (RJ): %u\nCarta 2 (Rio de Janeiro) venceu! \n", NumeroPontosTuristicos1, NumeroPontosTuristicos2);
+        } else if (NumeroPontosTuristicos1 == NumeroPontosTuristicos2)
+        {
+            printf("Comparação de cartas (Atributo: Pontos Turísticos): \nCarta 1 - São Paulo (SP): %u\nCarta 2 - Rio de Janeiro (RJ): %u\nEmpate! \n", NumeroPontosTuristicos1, NumeroPontosTuristicos2);
+        } 
+    } else
+    {
+        printf("Opção Inválida!!");
     }
-    
-
-
-
 
     return 0;
 }
